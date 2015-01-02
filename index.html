@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Alan Colon</title>
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3085253-3");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    </script>
+    <script type="text/javascript">
+        var cloudx = -1 * (Math.random() * 2168);
+        var Clouds = null;
+        var starx = -1 * (Math.random() * 2592);
+        var Stars = null;
+        function AnimateSky() {
+            if (Clouds == null || Stars == null ) {
+                Clouds = document.getElementById("Clouds");
+                Stars = document.getElementById("Stars");
+            }
+               cloudx -= 1;
+                if (cloudx <= -2168) cloudx = 0;
+                Clouds.style.left = cloudx + "px";
+
+                starx -= .1;
+                if (starx <= -2592) starx = 0;
+                Stars.style.left = starx + "px";
+
+
+            setTimeout(AnimateSky, 60);
+        }
+    </script>
+
+    <style type="text/css">
+    html,body{
+      margin:0;
+      padding:0;
+      height:100%;
+      border:none
+   }
+
+        body, td {
+            color: white;
+            font-family: arial;
+            font-size: 12pt;
+        }
+        .h1 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #ff7400;
+        }
+        .h2 {
+            font-size: 10pt;
+            color: #da5300;
+        }
+        a {
+            color: #ff7400;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-top: 0px;
+            list-style-type:square;
+             color: yellow;
+        }
+    </style>
+</head>
+<body style="background-color: Black; background-image: url(california/Background.gif);
+    background-position: center top; color: White; margin: 0px 0px 0px 0px; empty-cells: show;">
+    <form id="form1" runat="server">
+        <table cellpadding='0' cellspacing='0' style="width: 100%;">
+            <tr>
+                <td style="width: auto; border: solid 1px transparent;">
+                </td>
+                <td style="width: 870px;">
+                    <div style="width: 870px; text-align: left;">
+                        <div style="width: 870px; height: 190px; position: relative; overflow: hidden; x-background-color: #86079d;
+                            background-color: DarkBlue;">
+
+                            <img style="position: absolute; width: 870px; height: 190px;" src="california/layerShade.png" />
+                            <div id='Stars' style='position: absolute; left: 0px; top: 0px; width: 5184px; height: 180px;'>
+                                <img style='position: absolute; left: 0px; top: 0px; width: 2592px; height: 180px;'
+                                    src='california/layerGemini.png' />
+                                <img style='position: absolute; left: 2592px; top: 0px; width: 2592px; height: 180px;'
+                                    src='california/layerGemini.png' />
+                            </div>
+                            <img style="position: absolute; width: 870px; height: 190px;" src="california/layerMountains.png" />
+                            <div id='Clouds' style='position: absolute; left: 0px; top: 0px; width: 4336px; height: 180px;'>
+                                <img style='position: absolute; left: 0px; top: 0px; width: 2168px; height: 180px;'
+                                    src='california/layerClouds.png' />
+                                <img style='position: absolute; left: 2168px; top: 0px; width: 2168px; height: 180px;'
+                                    src='california/layerClouds.png' />
+                            </div>
+                            <img style="position: absolute; width: 870px; height: 190px;" src="california/layerHills.png" />
+                        </div>
+
+                        <script type="text/javascript">AnimateSky();</script>
+
+                        <div style="background-color: #404040; background-image: url(california/layerSkyline.gif);
+                            background-position: 79px bottom; background-repeat: no-repeat; padding-bottom: 90px;">
+                            <table cellpadding="5" cellspacing="5" style="width: 100%;">
+                                <tbody>
+                                    <tr style="">
+                                        <td style="width: 200px; vertical-align: top;" rowspan="2">
+                                            <div style="border-right: solid 1px black;">
+<!-- TODO: Navigation -->
+                                            </div>
+                                            <div style="height: 94px; width: 100%;">
+                                                &nbsp;</div>
+                                        </td>
+                                        <td style="vertical-align: top;" rowspan="2">
+
+                                        <!-- TODO: Content -->
+                                          <img src="http://i.imgur.com/LiJWq7O.jpg" style="max-width: 400px;" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="background-color: Black; height: 73px;">
+                            &nbsp;</div>
+                    </div>
+                </td>
+                <td style="width: auto; border: solid 1px transparent;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
