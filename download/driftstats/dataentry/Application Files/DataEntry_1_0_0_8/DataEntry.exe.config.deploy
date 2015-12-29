@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+      <add name="DriftStats" connectionString="Server=tcp:v8mcyuzm45.database.windows.net,1433;Database=driftstats-prod;User ID={username};Password={password};Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" providerName="SqlDataProvider"/>
+    </connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>
